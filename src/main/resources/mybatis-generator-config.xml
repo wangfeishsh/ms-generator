@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+	<classPathEntry location="/Users/user/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar" />
+
+	<context id="mysqltables" targetRuntime="MyBatis3">
+
+		<property name="autoDelimitKeywords" value="true" />
+		<property name="beginningDelimiter" value="`" />
+		<property name="endingDelimiter" value="`" />
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!--数据库链接地址账号密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.3.159:3306/db_nono_pay" userId="payment" password="zKo27CLjpuEbpHnuDqMQNw==" />
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!--生成Model类存放位置 targetPackage 需要自定义 目录自动生成 basePackage -->
+		<javaModelGenerator targetPackage="pay.model.po" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--生成映射文件存放位置 -->
+		<sqlMapGenerator targetPackage="mapper/db1" targetProject="src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!--生成Dao类存放位置 targetPackage 需要自定义 目录自动生成 basePackage-->
+		<javaClientGenerator targetPackage="pay.dao.local.db1" targetProject="src/main/java" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- 正式生成之前需要删除 此事例 -->
+		<table tableName="tb_pay_bank" domainObjectName="PayBank"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_pay_bank" domainObjectName="PayBank"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_pay_limit" domainObjectName="PayLimit"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_pay_order" domainObjectName="PayOrder"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_pay_record" domainObjectName="PayRecord"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_pay_record_log" domainObjectName="PayRecordLog"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_withdraw_record" domainObjectName="WithDrawRecord"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_pay_acc_log" domainObjectName="PayAccLog"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+		<table tableName="tb_pay_trans_info" domainObjectName="PayTransInfo"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+
+		<table tableName="tb_pay_token" domainObjectName="PayToken"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+			<!--<columnOverride column="bo_expect_cat" jdbcType="TINYINT"
+				javaType="java.lang.Integer" />-->
+		</table>
+
+	</context>
+</generatorConfiguration>
